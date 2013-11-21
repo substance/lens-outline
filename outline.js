@@ -6,7 +6,7 @@ var _ = require("underscore");
 
 // Lens.Outline
 // ==========================================================================
-// 
+//
 // Takes a surface, which is projected to a minimap
 
 var Outline = function(surface) {
@@ -28,16 +28,16 @@ var Outline = function(surface) {
   // --------
 
   this.$el.mousedown(this.mouseDown);
-  
+
   $(window).mousemove(this.mouseMove);
   $(window).mouseup(this.mouseUp);
 };
 
 Outline.Prototype = function() {
-  
+
   // Render Document Outline
   // -------------
-  // 
+  //
   // Renders outline and calculates bounds
 
   this.render = function() {
@@ -47,7 +47,7 @@ Outline.Prototype = function() {
     var fragment = document.createDocumentFragment();
     this.visibleArea = $$('.visible-area');
     fragment.appendChild(this.visibleArea);
-    
+
 
     // Initial Calculations
     // --------
@@ -61,7 +61,7 @@ Outline.Prototype = function() {
     // Render nodes
     // --------
 
-    var container = this.surface.doc.container;
+    var container = this.surface.getContainer();
     var nodes = container.getTopLevelNodes();
 
     _.each(nodes, function(node) {
@@ -98,7 +98,7 @@ Outline.Prototype = function() {
 
   // Update visible area
   // -------------
-  // 
+  //
   // Should get called from the user when the content area is scrolled
 
   this.updateVisibleArea = function(scrollTop) {
@@ -111,9 +111,9 @@ Outline.Prototype = function() {
 
   // Update Outline
   // -------------
-  // 
+  //
   // Usage:
-  // 
+  //
   // outline.update({
   //   selectedNode: "node_14",
   //   highlightNodes: []
@@ -142,7 +142,7 @@ Outline.Prototype = function() {
 
   // Handle Mouse down event
   // -----------------
-  // 
+  //
 
   this.mouseDown = function(e) {
     this._mouseDown = true;
@@ -153,7 +153,7 @@ Outline.Prototype = function() {
       this.offset = $(this.visibleArea).height()/2;
       this.mouseMove(e);
     } else {
-      this.offset = y - $(this.visibleArea).position().top;  
+      this.offset = y - $(this.visibleArea).position().top;
     }
 
     return false;
@@ -161,7 +161,7 @@ Outline.Prototype = function() {
 
   // Handle Mouse Up
   // -----------------
-  // 
+  //
   // Mouse lifted, no scroll anymore
 
   this.mouseUp = function() {
@@ -170,7 +170,7 @@ Outline.Prototype = function() {
 
   // Handle Scroll
   // -----------------
-  // 
+  //
   // Handle scroll event
   // .visible-area handle
 
