@@ -62,7 +62,7 @@ Outline.Prototype = function() {
     // --------
 
     var container = this.surface.getContainer();
-    var nodes = container.getTopLevelNodes();
+    var nodes = container.getNodes();
 
     _.each(nodes, function(node) {
       var dn = this.surface.$('#'+node.id);
