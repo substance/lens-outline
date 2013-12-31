@@ -125,7 +125,7 @@ Outline.Prototype = function() {
 
     // Reset
     this.$('.node').removeClass('selected').removeClass('highlighted');
-    this.$el.removeClass('figures').removeClass('citations');
+    this.$el.removeClass('figures').removeClass('citations').removeClass('errors').removeClass('remarks');
 
     // Set context
     this.$el.addClass(state.context);
