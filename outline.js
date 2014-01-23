@@ -58,6 +58,13 @@ Outline.Prototype = function() {
     var factor = (contentHeight / panelHeight);
     this.factor = factor;
 
+    // Content height is smaller as the panel height, we don't need a scrollbar
+    if (panelHeight > contentHeight) {
+      this.$el.addClass('needless');
+      this.el.innerHTML = "";
+      return;
+    }
+
     // Render nodes
     // --------
 
@@ -86,7 +93,6 @@ Outline.Prototype = function() {
 
     // Init scroll pos
     var scrollTop = that.surface.$el.scrollTop();
-
 
     that.el.innerHTML = "";
     that.el.appendChild(fragment);
@@ -133,10 +139,11 @@ Outline.Prototype = function() {
     // Mark selected node
     this.$('#outline_' + state.selectedNode).addClass('selected');
 
-    // 2. Mark highlighted nodes
+    // Mark highlighted nodes
     _.each(state.highlightedNodes, function(n) {
       this.$('#outline_'+n).addClass('highlighted');
     }, this);
+
   };
 
 

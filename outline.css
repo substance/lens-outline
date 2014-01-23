@@ -6,14 +6,13 @@ Outline
   background: #fff;
   position: absolute;
   left: 0px;
-  width:50px;
+  width:30px;
   top: 0px;
   bottom: 0px;
 }
 
 .lens-outline .node.cover {
-  /*background: #5c6570;*/
-  /*opacity: 1;*/
+
 }
 
 .lens-outline .node .arrow {
@@ -54,19 +53,11 @@ Outline
 
 .lens-outline .node {
   margin: 0 5px;
-  width: 40px;
+  width: 20px;
   background: rgba(0,0,0, 0.4);
   opacity: 0.15;
   cursor: pointer;
 }
-
-.lens-outline .node:hover {
-  /*opacity: 0.4;*/
-}
-
-/*.lens-outline .node.highlighted:hover {
-  opacity: 1.0;
-}*/
 
 .lens-outline .text {
 }
@@ -74,7 +65,6 @@ Outline
 .lens-outline .heading {
   background: rgba(0,0,0, 0.5);
 }
-
 
 .lens-outline .node.selected {
   opacity: 1.0;
@@ -91,7 +81,6 @@ Outline
   opacity: 0.7;
   background: rgba(145, 187, 4, 1);
 }
-
 
 /* Blueish highlighted nodes (citations) */
 
