@@ -52,8 +52,8 @@ Outline
 }
 
 .lens-outline .node {
-  margin: 0 5px;
-  width: 20px;
+  margin: 0px 0px;
+  width: 30px;
   background: rgba(0,0,0, 0.4);
   opacity: 0.15;
   cursor: pointer;
