@@ -59,7 +59,7 @@ Outline.Prototype = function() {
     this.factor = factor;
 
     // Content height is smaller as the panel height, we don't need a scrollbar
-    if (panelHeight > contentHeight) {
+    if (panelHeight >= contentHeight) {
       this.$el.addClass('needless');
       this.el.innerHTML = "";
       return;
