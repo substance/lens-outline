@@ -1,7 +1,7 @@
 {
-  "name": "lens-outline",
+  "name": "substance-outline",
   "description": "Visual document outline for Substance Documents",
-  "url": "http://github.com/elifesciences/lens-outline",
+  "url": "http://github.com/substance/outline",
   "keywords": [
     "document map",
     "document navigation",
@@ -15,12 +15,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/elifesciences/lens-outline.git"
+    "url": "https://github.com/substance/outline.git"
   },
   "dependencies": {
     "underscore": "1.5.x",
-    "substance-util": "git+https://github.com/substance/util.git#0.3.x",
-    "substance-application": "git+https://github.com/substance/application.git#0.2.x"
+    "substance-util": "0.3.0",
+    "substance-application": "0.2.0"
   },
   "version": "0.2.0",
   "engines": {
