@@ -93,15 +93,17 @@ Outline
   opacity: 0.7;
   /*background: rgba(46,199,161, 1);*/
   background: white;
-  border: 3px solid rgba(11, 157, 217, 1);
+  background: rgba(255, 235, 0, 1);
+  /*border: 3px solid rgba(11, 157, 217, 1);*/
   /*background: rgba(11, 157, 217, 1);*/
 }
 
 .lens-outline.errors .node.highlighted {
   opacity: 0.7;
   background: white;
+  background: rgba(255, 31, 0, 1);
   /*border: 1px solid rgba(228, 67, 34, 1);*/
-  border: 3px solid rgba(228, 34, 34, 1);
+  /*border: 3px solid rgba(228, 34, 34, 1);*/
 }
 
 
