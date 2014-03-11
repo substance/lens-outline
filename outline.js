@@ -1,8 +1,9 @@
 "use strict";
 
+var _ = require("underscore");
+var $ = window.$;
 var View = require("substance-application").View;
 var $$ = require("substance-application").$$;
-var _ = require("underscore");
 
 // Lens.Outline
 // ==========================================================================
@@ -44,7 +45,7 @@ Outline.Prototype = function() {
     var that = this;
     var totalHeight = 0;
 
-    var fragment = document.createDocumentFragment();
+    var fragment = window.document.createDocumentFragment();
     this.visibleArea = $$('.visible-area');
     fragment.appendChild(this.visibleArea);
 
