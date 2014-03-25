@@ -1,7 +1,6 @@
-Lens.Outline
+Substance.Outline
 ==============
 
 A visual document outline, pluggable into your project.
 
-If you spot any errors or have feedback please create an issue [here](http://github.com/elifesciences/lens/issues).
-
+To suggest a feature, report a bug, or general discussion: http://github.com/substance/substance/issues/
