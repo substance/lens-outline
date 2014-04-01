@@ -109,9 +109,11 @@ Outline.Prototype = function() {
   // Should get called from the user when the content area is scrolled
 
   this.updateVisibleArea = function(scrollTop) {
+    var targetWidth = this.surface.$el.height() / this.factor;
     $(this.visibleArea).css({
+      // TODO: add correction to top: so handle works on lower bound
       "top": scrollTop / this.factor,
-      "height": this.surface.$el.height() / this.factor
+      "height": Math.max(targetWidth, 20)
     });
   };
 
