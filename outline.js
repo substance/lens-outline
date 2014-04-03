@@ -63,7 +63,7 @@ Outline.Prototype = function() {
     if (panelHeight >= contentHeight) {
       this.$el.addClass('needless');
       this.el.innerHTML = "";
-      return;
+      return this;
     }
 
     // Render nodes
