@@ -87,7 +87,7 @@ Outline.Prototype = function() {
           "top": totalHeight
         })
         .addClass(node.type)
-        .append('<div class="arrow">');
+        // .append('<div class="arrow">');
       fragment.appendChild($node[0]);
       totalHeight += height;
     }, this);
