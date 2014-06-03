@@ -3,12 +3,15 @@ Outline
 --------------------------------------- */
 
 .lens-outline {
-  background: #fff;
   position: absolute;
   left: 0px;
   width:30px;
   top: 0px;
   bottom: 0px;
+}
+
+.lens-outline.needless {
+  background: none;
 }
 
 .lens-outline .node.cover {
