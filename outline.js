@@ -178,7 +178,6 @@ Outline.Prototype = function() {
   // Mouse lifted, no scroll anymore
 
   this.mouseUp = function() {
-    console.log('mous up', this._mouseDown);
     this._mouseDown = false;
   };
 
