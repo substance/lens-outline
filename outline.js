@@ -124,13 +124,17 @@ Outline.Prototype = function() {
   // Usage:
   //
   // outline.update({
-  //   selectedNode: "node_14",
-  //   highlightNodes: []
+  //   selectedNodes: ["node_14"],
+  //   highlightedNodes: []
   // })
 
   this.update = function(state) {
     this.render();
-    this.state = state;
+    
+    _.extend(this.state, state);
+
+    // Backward compatibility
+    var selectedNodes = state.selectedNodes || [state.selectedNode];
 
     // Reset
     this.$('.node').removeClass('selected').removeClass('highlighted');
@@ -141,14 +145,15 @@ Outline.Prototype = function() {
     // Set context
     this.$el.addClass(state.context);
 
-    // Mark selected node
-    this.$('#outline_' + state.selectedNode).addClass('selected');
+    // Mark selected nodes
+    _.each(selectedNodes, function(node) {
+      this.$('#outline_' + node).addClass('selected');
+    }, this);
 
     // Mark highlighted nodes
     _.each(state.highlightedNodes, function(n) {
       this.$('#outline_'+n).addClass('highlighted');
     }, this);
-
   };
 
 

@@ -70,7 +70,8 @@ Outline
 }
 
 .lens-outline .node.selected {
-  opacity: 1.0;
+  opacity: 0.4;
+  /*border-right: 2px solid #000;*/
 }
 
 .node.highlighted {
@@ -106,22 +107,20 @@ Outline
   opacity: 0.7;
   background: white;
   background: rgba(255, 31, 0, 1);
-  /*border: 1px solid rgba(228, 67, 34, 1);*/
-  /*border: 3px solid rgba(228, 34, 34, 1);*/
 }
 
 
-.lens-outline.figures .node.selected {
+/*.lens-outline.figures .node.selected {
   opacity: 1;
   background: rgba(145, 187, 4, 1);
-}
+}*/
 
 /* Blueish highlighted nodes (citations) */
 
-.lens-outline.citations .node.selected,
+/*.lens-outline.citations .node.selected,
 .lens-outline.links .node.selected {
   opacity: 1;
   background: rgba(11, 157, 217, 1);
-}
+}*/
 
 
