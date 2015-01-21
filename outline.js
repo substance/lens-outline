@@ -68,7 +68,7 @@ Outline.Prototype = function() {
 
     // Render nodes
     // --------
-
+    /*
     var container = this.surface.getContainer();
     var nodes = container.getNodes();
 
@@ -91,6 +91,7 @@ Outline.Prototype = function() {
       fragment.appendChild($node[0]);
       totalHeight += height;
     }, this);
+    */
 
     // Init scroll pos
     var scrollTop = that.surface.$el.scrollTop();
@@ -130,7 +131,7 @@ Outline.Prototype = function() {
 
   this.update = function(state) {
     this.render();
-    
+
     _.extend(this.state, state);
 
     // Backward compatibility
